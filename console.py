@@ -74,7 +74,7 @@ class HBNBCommand(cmd.Cmd):
         objs = storage.all()
         key_value = args[0] + '.' + args[1]
         if key_value in objs:
-            print(obj[key_value])
+            print(objs[key_value])
         else:
             print("** no instance found **")
 
@@ -174,7 +174,7 @@ class HBNBCommand(cmd.Cmd):
             try:
                 setattr(new_class, attrib_name, float(updated_value))
                 storage.save()
-            except TypeError:
+            except:
                 setattr(new_class, attrib_name, str(updated_value))
                 storage.save()
 
