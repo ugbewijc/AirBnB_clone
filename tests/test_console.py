@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 import unittest
-import pep8
+import pycodestyle
 import json
 import os
 from datetime import datetime
@@ -24,10 +24,10 @@ class TestHBNBCommandDocs(unittest.TestCase):
 
 
 class TestHBNBCommandPep8(unittest.TestCase):
-    """ check for pep8 validation """
-    def test_pep8(self):
-        """ test base and test_base for pep8 conformance """
-        style = pep8.StyleGuide(quiet=True)
+    """ check for pycodestyle validation """
+    def test_pycodestyle(self):
+        """ test base for pycodestyle """
+        style = pycodestyle.StyleGuide(quiet=True)
         file1 = 'console.py'
         file2 = 'tests/test_console.py'
         result = style.check_files([file1, file2])
