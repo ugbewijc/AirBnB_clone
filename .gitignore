@@ -1,0 +1,8 @@
+# ignore .pyc files
+*.pyc
+
+#ignore file.json
+file.json
+
+#ignore quick test file
+quick_test.py
